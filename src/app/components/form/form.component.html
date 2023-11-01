@@ -1,0 +1,17 @@
+<form [formGroup]="newTaskForm" (submit)="insertar()" class="row g-3 mb-4">
+    <div class="col-10">
+        <input formControlName="description" type="text" class="form-control" placeholder="nueva tarea" minlength="2">
+        <div *ngIf="description?.errors?.['required'] && description?.touched">
+            <p [ngStyle]="{color:'tomato'}">Campo requerido</p>
+        </div>
+        <div *ngIf="description?.errors?.['minlength'] && description?.touched">
+            <p [ngStyle]="{color:'tomato'}">Longitud muy corta, agrega mas caracteres</p>
+        </div>
+        <div *ngIf="description?.errors?.['maxlength'] && description?.touched">
+            <p [ngStyle]="{color:'tomato'}">Longitud muy larga, maximo 100 caracteres.</p>
+        </div>
+    </div>
+    <div class="col-2">
+        <button type="submit" class="btn btn-success"><i class="bi bi-plus-lg"></i></button>
+    </div>
+</form>

@@ -1,0 +1,20 @@
+<div *ngIf="listTasks != null; else isEmpty" >
+    <div *ngFor="let item of listTasks; let i = index" class="row row-cols-auto g-3 mb-3">
+        <div class="col-10">
+            <input type="hidden" value="{{item.id}}">
+            <div class="form-check">
+                <input (change)="update(i)" type="checkbox" [checked]="item.isCompleted" id="isCompleted{{i}}"
+                    class="form-check-input pointer">
+                <label class="form-check-label text-wrap w-100 pointer" for="isCompleted{{i}}">{{item.description}}</label>
+            </div>
+        </div>
+        <div class="col-2">
+            <button (click)="delete(i)" class="btn btn-danger" ><i class="bi bi-trash3"></i></button>
+        </div>
+    </div>
+</div>
+<ng-template #isEmpty>
+    <div class="row row-cols-auto g-3 mb-3">
+        <p><i>Esto esta muy vacio..</i></p>
+    </div>    
+</ng-template>

@@ -1,0 +1,12 @@
+<nav class="navbar bg-body-tertiary mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TODO</a>
+    </div>
+</nav>
+<div class="container">
+<app-form (insertEvent)="insertTask($event)"></app-form>
+<h1>Lista de tareas</h1>
+<app-list [listTasks]="listTasks"
+        (updateEvent)="updateTask($event)"
+        (deleteEvent)="deleteTask($event)"></app-list>
+</div>
