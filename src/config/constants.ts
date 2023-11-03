@@ -1,0 +1,1 @@
+export const todoApiURL:string = 'https://localhost:7116/api/Todo';

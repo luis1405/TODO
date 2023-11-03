@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Instalacion
 1. Ejecutar el comando `npm install` para que se instalen las dependencias
-2. EL proyecto utiliza una conexion a un servidor (proyecto Mongo TODO) en la url `https://localhost:7116/api/Todo`, la configuracion se encuentra en src/app/services/todo.service.ts
+2. EL proyecto utiliza una conexion a un servidor (proyecto Mongo TODO) en la url `https://localhost:7116/api/Todo`, la configuracion se encuentra en src/app/config/constanst.ts
 3. ejecutar con el comando `npm start`, si no ocurre ningun error, la aplicacion debe poder ser accesible en la url default `https://localhost:4200`, algunos navegadores bloquean la direccion por tener un certificado no reconocido, se puede acceder desde modo incognito a la url sin certificado `http://localhost:4200`.
